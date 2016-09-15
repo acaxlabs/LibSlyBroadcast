@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>LibSlyBroadcast</id>
+    <version>1.0.0.0</version>
+    <title>LibSlyBroadcast</title>
+    <authors>acaexpress,Phrohdoh</authors>
+    <owners>acaexpress,Phrohdoh</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/acaxlabs/LibSlyBroadcast</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A library to ease the use of SlyBroadcast's API in .NET applications</description>
+    <releaseNotes>This is the initial release.</releaseNotes>
+    <copyright>Copyright ACAExpress.com, Inc 2016</copyright>
+    <tags>LibSlyBroadcast SlyBroadcast ACAXLabs ACAExpress</tags>
+  </metadata>
+  <files>
+    <file src="bin\Debug\LibSlyBroadcast.dll" target="lib\net45"/>
+  </files>
+</package>
