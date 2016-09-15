@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LibSlyBroadcast
+namespace LibSlyBroadcast.Extensions
 {
-    static class Exts
+    public static class SlyBroadcastExts
     {
         public static DateTime ToEst(this DateTime dt)
         {
