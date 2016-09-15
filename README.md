@@ -3,6 +3,9 @@
 A library for using the SlyBroadcast API from .NET
 
 ```csharp
+using LibSlyBroadcast;
+using LibSlyBroadcast.Extensions;
+
 class MainClass
 {
     public static void Main(string[] args)
