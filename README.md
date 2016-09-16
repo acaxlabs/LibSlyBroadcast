@@ -27,3 +27,7 @@ public static void Main(string[] args)
         Console.WriteLine(url);
 }
 ```
+
+This library can not be used with Mono as `TimeZoneInfo.FindSystemTimeZoneById` (used to convert DateTimes to EST) uses the Windows Registry.
+
+Eventually this will want to be rewritten using [NodaTime](http://nodatime.org/).
