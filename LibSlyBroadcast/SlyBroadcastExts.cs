@@ -11,7 +11,7 @@ namespace LibSlyBroadcast.Extensions
             return TimeZoneInfo.ConvertTime(dt, est);
         }
 
-        public static string ToFormattedString(this DateTime dt) => dt.ToString("yyyy-MM-dd HH:MM:ss");
+        public static string ToFormattedString(this DateTime dt) => dt.ToString("yyyy-MM-dd HH:mm:ss");
 
         public static string ToFormattedEstString(this DateTime dt) => dt.ToEst().ToFormattedString();
 

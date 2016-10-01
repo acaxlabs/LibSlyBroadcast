@@ -177,6 +177,7 @@ namespace LibSlyBroadcast
 			return ret;
 		}
 
+        /// <returns>The final, formatted URL that a GET request is sent to</returns>
 		public string SendMessage()
 		{
 			if (!IsValid)
