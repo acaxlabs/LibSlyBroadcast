@@ -35,6 +35,7 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PostbackParser.cs" />
     <Compile Include="SlyBroadcast.cs" />
     <Compile Include="SlyBroadcastExts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
