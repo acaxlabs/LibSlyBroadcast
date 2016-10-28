@@ -127,12 +127,15 @@ namespace LibSlyBroadcast
             return this;
         }
 
-        /// <summary>Optional. Must be URL-Encoded if provided.</summary>
-        /// <param name="postbackUrl">The URL to POST data back to. Will be ignored if this is null, whitespace, or empty.</param>
+        /// <summary>Optional. Must not be URL-Encoded if provided.</summary>
+        /// <param name="postbackUrl">The URL to POST data back to. Will be ignored if this is null, whitespace, or empty. Must start with http:// or https://</param>
         public SlyBroadcast WithPostbackUrl(string postbackUrl)
         {
             if (string.IsNullOrWhiteSpace(postbackUrl))
                 return this;
+
+            if (!postbackUrl.StartsWith("http://") && !postbackUrl.StartsWith("https://"))
+                throw new ArgumentException($"{nameof(postbackUrl)} must start with http:// or https://", nameof(postbackUrl));
 
             PostbackUrl = postbackUrl;
             return this;
@@ -182,7 +185,7 @@ namespace LibSlyBroadcast
         }
 
         /// <returns>LF (0a)-delimited strings, first will be either OK or ERROR depending on the status of the request.</returns>
-		public string SendMessage()
+        public string SendMessage()
         {
             if (!IsValid)
                 return null;
