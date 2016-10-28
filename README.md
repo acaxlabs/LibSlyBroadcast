@@ -23,8 +23,9 @@ public static void Main(string[] args)
                 .WithPostbackUrl("http://example.com/endpoint")
                 .WithEndDate(DateTime.UtcNow.AddHours(2).ToFormattedEstString());
 
-        var url = broadcast.SendMessage();
-        Console.WriteLine(url);
+        var response = broadcast.SendMessage();
+        var responseValues = response.Split(new[] { "\r\n", "\n" });
+        Console.WriteLine(string.Join(Environment.NewLine, responseValues));
 }
 ```
 
